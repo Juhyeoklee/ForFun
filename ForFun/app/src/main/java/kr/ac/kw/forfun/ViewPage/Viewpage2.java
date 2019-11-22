@@ -16,11 +16,18 @@ import kr.ac.kw.forfun.R;
  * A simple {@link Fragment} subclass.
  */
 public class Viewpage2 extends Fragment {
-
+   // private static Viewpage2 viewpage2;
 
     public Viewpage2() {
         // Required empty public constructor
     }
+
+//    public static Viewpage2 getInstance(){
+//        if(viewpage2 == null)
+//            viewpage2 = new Viewpage2();
+//
+//        return viewpage2;
+//    }
 
 
     @Override

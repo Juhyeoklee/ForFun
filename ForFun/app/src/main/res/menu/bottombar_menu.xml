@@ -14,13 +14,13 @@
         app:showAsAction="ifRoom"/>
 
     <item
-        android:id="@+id/menuitem_bottombar_forfun"
-        android:icon="@drawable/ic_forfun_24px"
-        android:title="ForFun"
+        android:id="@+id/menuitem_bottombar_content"
+        android:icon="@drawable/ic_grid"
+        android:title="Content"
         app:showAsAction="ifRoom"/>
     <item
-        android:id="@+id/menuitem_bottombar_me"
-        android:icon="@drawable/ic_me_24px"
-        android:title="Me"
+        android:id="@+id/menuitem_bottombar_forfun"
+        android:icon="@drawable/ic_logo"
+        android:title="ForFun"
         app:showAsAction="ifRoom"/>
 </menu>

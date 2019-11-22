@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "701317870059",
+    "firebase_url": "https://forfun-8c46c.firebaseio.com",
+    "project_id": "forfun-8c46c",
+    "storage_bucket": "forfun-8c46c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701317870059:android:dfdc98f9a0cc694592a9ae",
+        "android_client_info": {
+          "package_name": "kr.ac.kw.forfun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701317870059-ptrbbfq3f7hgurup8p9a6kcisgbhdblu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.ac.kw.forfun",
+            "certificate_hash": "4131c976dda64f040ea75391f4b7c7e149c2e959"
+          }
+        },
+        {
+          "client_id": "701317870059-jsokoblva1434mcnuig72f7f1ci4lp15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC39rqfUYJP-0uHOxL5hPx-Rl5pPTn3AO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701317870059-jsokoblva1434mcnuig72f7f1ci4lp15.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
