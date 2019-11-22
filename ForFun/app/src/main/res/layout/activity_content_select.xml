@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fcfafa"
+    tools:context=".ContentSelectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="#ffffff"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="취미선택"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/nextText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:text="다음"
+
+                android:onClick="onClick"/>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ForFun에 오신 걸 환영합니다."
+            android:textColor="#FF9C79EC"
+            android:letterSpacing="-0.04"
+            android:textStyle="bold"
+            android:textSize="24dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="취미를 4개 이하로 선택해주세요."
+            android:letterSpacing="-0.04"
+            android:textSize="24dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <FrameLayout
+                        android:layout_width="140.5dp"
+                        android:layout_height="166.5dp">
+
+                        <ImageView
+                            android:id="@+id/movie_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/movie_content"
+                            android:onClick="contentOnClick"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="영화"
+                            android:textSize="18dp"
+                            android:textColor="#ffffff"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="bottom"/>
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"/>
+
+                    <FrameLayout
+                        android:layout_width="140.5dp"
+                        android:layout_height="166.5dp">
+
+                        <ImageView
+                            android:id="@+id/play_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/play_content"
+                            android:onClick="contentOnClick"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="연극"
+                            android:textSize="18dp"
+                            android:textColor="#ffffff"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="bottom"/>
+                    </FrameLayout>
+                </LinearLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <FrameLayout
+                        android:layout_width="140.5dp"
+                        android:layout_height="166.5dp">
+
+                        <ImageView
+                            android:id="@+id/performance_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/performance_content"
+                            android:onClick="contentOnClick"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="공연"
+                            android:textSize="18dp"
+                            android:textColor="#ffffff"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="bottom"/>
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"/>
+
+                    <FrameLayout
+                        android:layout_width="140.5dp"
+                        android:layout_height="166.5dp">
+
+                        <ImageView
+                            android:id="@+id/book_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/book_content"
+                            android:onClick="contentOnClick"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="책"
+                            android:textSize="18dp"
+                            android:textColor="#ffffff"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="bottom"/>
+                    </FrameLayout>
+                </LinearLayout>
+
+            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <FrameLayout
+                        android:layout_width="140.5dp"
+                        android:layout_height="166.5dp">
+
+                        <ImageView
+                            android:id="@+id/exhibition_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/exhibition_content"
+                            android:onClick="contentOnClick"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="전시회"
+                            android:textSize="18dp"
+                            android:textColor="#ffffff"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="bottom"/>
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"/>
+
+                    <FrameLayout
+                        android:layout_width="140.5dp"
+                        android:layout_height="166.5dp">
+
+                        <ImageView
+                            android:id="@+id/room_escape_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/room_escape_content"
+                            android:onClick="contentOnClick"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="방탈출"
+                            android:textSize="18dp"
+                            android:textColor="#ffffff"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="bottom"/>
+                    </FrameLayout>
+                </LinearLayout>
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

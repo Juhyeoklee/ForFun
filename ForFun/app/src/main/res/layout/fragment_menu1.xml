@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragment.Menu1Fragment">
+    tools:context=".Fragment.Menu3Fragment">
 
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,11 +13,19 @@
         android:id="@+id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabGravity="center"
         app:tabMode="fixed"
         app:tabTextColor="#000000"
-        app:tabSelectedTextColor="@color/colorPrimary"
-        app:tabIndicatorColor="@color/colorPrimary">
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:tabSelectedTextColor="@color/textColorPrimary"
+        app:tabIndicatorColor="@drawable/text">
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AAA"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BBB" />
 
     </com.google.android.material.tabs.TabLayout>
 
@@ -25,6 +33,6 @@
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
 </LinearLayout>
