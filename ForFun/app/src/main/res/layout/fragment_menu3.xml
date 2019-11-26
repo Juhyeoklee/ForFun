@@ -7,10 +7,47 @@
     tools:context=".Fragment.Menu1Fragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="right"
-        android:text="MENU 3" />
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/storyRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+
+                android:scrollbars="horizontal"
+                android:scrollbarStyle="outsideInset"
+                android:background="@drawable/bottom_border"/>
+
+            <TextView
+                android:id="@+id/todayForfunMate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:layout_marginBottom="16dp"
+                android:textSize="16.3sp"
+                android:textColor="#000000"
+                android:letterSpacing="-0.04"
+                android:lineSpacingExtra="7.8sp"
+                android:text="오늘의 포펀메이트"
+                android:layout_marginStart="28dp"
+                android:layout_below="@+id/storyRecyclerView"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/forfunMateRcyView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:isScrollContainer="false"
+                android:layout_below="@id/todayForfunMate"/>
+
+        </RelativeLayout>
+    </ScrollView>
 </LinearLayout>

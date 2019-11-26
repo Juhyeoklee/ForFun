@@ -243,6 +243,5 @@ public class ContentSelectActivity extends AppCompatActivity {
             }
         }
 
-
     }
 }
