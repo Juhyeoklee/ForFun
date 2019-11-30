@@ -18,13 +18,14 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 public class MyHeartForFunAdapter extends RecyclerView.Adapter<MyHeartForFunAdapter.ViewHolder> {
-    private ArrayList<MyHeartForFunListItem> mData = null;
+    private ArrayList<Group> mData = null;
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView forfunTag;
         TextView forfunName;
         TextView forfunPostUser;
         ImageView profile;
+        ImageView groupImg;
         ImageView icParInUser;
 
         ViewHolder(View itemView) {
@@ -34,6 +35,7 @@ public class MyHeartForFunAdapter extends RecyclerView.Adapter<MyHeartForFunAdap
             forfunTag = itemView.findViewById(R.id.myheartforfunTag);
             forfunName = itemView.findViewById(R.id.myheartforfunName);
             forfunPostUser = itemView.findViewById(R.id.forfunPostUserName);
+            groupImg = itemView.findViewById(R.id.groupImg);
 
             profile = itemView.findViewById(R.id.forfunPostUserProfileImg);
             profile.setBackground(new ShapeDrawable(new OvalShape()));
@@ -43,7 +45,7 @@ public class MyHeartForFunAdapter extends RecyclerView.Adapter<MyHeartForFunAdap
 
         }
     }
-    public MyHeartForFunAdapter(ArrayList<MyHeartForFunListItem> list){
+    public MyHeartForFunAdapter(ArrayList<Group> list){
         mData = list;
     }
 
@@ -61,9 +63,10 @@ public class MyHeartForFunAdapter extends RecyclerView.Adapter<MyHeartForFunAdap
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.forfunTag.setText(mData.get(position).tag);
-        holder.forfunName.setText(mData.get(position).name);
-        holder.forfunPostUser.setText(mData.get(position).postUser);
+        holder.forfunTag.setText(mData.get(position).getTag());
+        holder.forfunName.setText(mData.get(position).getTitle());
+        holder.forfunPostUser.setText(mData.get(position).getHostName());
+        holder.groupImg.setImageResource(mData.get(position).getContents().getContentImg());
     }
 
     @Override

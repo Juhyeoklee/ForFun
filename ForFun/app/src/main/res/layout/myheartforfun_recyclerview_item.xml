@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/groupImg"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:scaleType="fitXY"
@@ -29,34 +29,41 @@
             android:layout_marginEnd="5dp"
             android:scaleType="fitXY"
             android:src="@drawable/bg_request_forfun_request"
-            app:layout_constraintEnd_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="@id/imageView4" />
+            app:layout_constraintEnd_toEndOf="@+id/groupImg"
+            app:layout_constraintTop_toTopOf="@id/groupImg" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="120dp"
         android:orientation="vertical"
         android:layout_marginTop="2dp"
         android:background="@drawable/bottom_border">
 
-
-        <TextView
-            android:id="@+id/myheartforfunTag"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="#제과제빵 #실습 #마카롱"/>
-        <TextView
-            android:id="@+id/myheartforfunName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="일요일에 나랑 같이 마카롱 만들 분 ㅠㅠ"
-            android:textColor="#000000"
-            android:textSize="15dp"
-            android:layout_marginTop="1dp"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/myheartforfunTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#제과제빵 #실습 #마카롱"/>
+            <TextView
+                android:id="@+id/myheartforfunName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="일요일에 나랑 같이 마카롱 만들 분 ㅠㅠㅠㅠㅠㅠ bbb@@@@@@@@@@@@@@@@@@@@@@"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:layout_marginTop="1dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="4dp">
             <ImageView

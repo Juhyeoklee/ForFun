@@ -1,17 +1,27 @@
 package kr.ac.kw.forfun;
 
 public class ForFunMateItem {
-    public String forfunName;
-    public String forfunTag;
+    private Contents contents;
+    private User user;
 
-    public String mateName;
-    public String mateTag;
-
-    public ForFunMateItem(String forfunName, String forfunTag, String mateName, String mateTag){
-        this.forfunName = forfunName;
-        this.forfunTag = forfunTag;
-        this.mateName = mateName;
-        this.mateTag = mateTag;
+    public ForFunMateItem(Contents contents, User user) {
+        this.contents = contents;
+        this.user = user;
     }
 
+    public Contents getContents() {
+        return contents;
+    }
+
+    public void setContents(Contents contents) {
+        this.contents = contents;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }

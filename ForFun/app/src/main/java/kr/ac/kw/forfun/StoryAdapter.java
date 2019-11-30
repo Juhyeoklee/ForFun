@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> {
 
-    private ArrayList<String> mData = null ;
+    private ArrayList<User> mData = null ;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView textView1 ;
@@ -36,7 +36,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
         }
     }
 
-    public StoryAdapter(ArrayList<String> list){
+    public StoryAdapter(ArrayList<User> list){
         this.mData = list;
     }
 
@@ -54,8 +54,8 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        String text = mData.get(position) ;
-        holder.textView1.setText(text) ;
+        holder.profile.setImageResource(mData.get(position).getUserProfileImg());
+        holder.textView1.setText(mData.get(position).getUserName());
     }
 
     @Override

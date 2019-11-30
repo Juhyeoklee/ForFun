@@ -16,7 +16,7 @@
             android:layout_height="240dp">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/rqForFunContentsImg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:foreground="#80000000"
@@ -39,6 +39,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/rqForFunContentsBigTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -175,6 +176,7 @@
             android:layout_marginEnd="120dp">
 
             <TextView
+                android:id="@+id/rqForFunContentsSmallTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="12.5sp"
@@ -192,6 +194,7 @@
                 android:textSize="12.5sp" />
 
             <TextView
+                android:id="@+id/rqForFunContentsIntroduction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -210,6 +213,7 @@
                 android:textSize="12.5sp" />
 
             <TextView
+                android:id="@+id/rqForFunContentsTerm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -228,6 +232,7 @@
                 android:textSize="12.5sp" />
 
             <TextView
+                android:id="@+id/rqForFunContentsTag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -237,6 +242,7 @@
                 android:textSize="12.5sp" />
 
             <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -246,6 +252,7 @@
                 android:textSize="12.5sp" />
 
             <TextView
+                android:id="@+id/rqForFunContentsLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -253,15 +260,6 @@
                 android:text="올림픽공원"
                 android:textColor="#000000"
                 android:textSize="12.5sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:lineSpacingExtra="3.8sp"
-                android:text="서울특별시 송파구 오륜동 올림픽로 424"
-                android:textColor="#777777"
-                android:textSize="11.3sp" />
 
         </LinearLayout>
 

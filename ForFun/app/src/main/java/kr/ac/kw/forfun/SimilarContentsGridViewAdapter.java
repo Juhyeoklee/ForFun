@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -40,6 +41,7 @@ public class SimilarContentsGridViewAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.grid_cell_similar_contents, viewGroup, false);
         }
+        ImageView contentImg = view.findViewById(R.id.gridContentImg);
 
         TextView date = (TextView) view.findViewById(R.id.contentDate);
         TextView contentTitle = (TextView) view.findViewById(R.id.gridContentTitle);
@@ -47,6 +49,7 @@ public class SimilarContentsGridViewAdapter extends BaseAdapter {
 
         SimilarContentsGridViewItem gridViewItem = gridViewItemsList.get(i);
 
+        contentImg.setImageResource(gridViewItem.getImg());
         date.setText(gridViewItem.getDate());
         contentTitle.setText(gridViewItem.getContentTitle());
         contentLocation.setText(gridViewItem.getContentLocation());
@@ -55,10 +58,11 @@ public class SimilarContentsGridViewAdapter extends BaseAdapter {
         return view;
     }
 
-    public void addItem(String date, String contentTitle, String contentLocation){
+    public void addItem(String date, int img,  String contentTitle, String contentLocation){
         SimilarContentsGridViewItem item = new SimilarContentsGridViewItem();
 
         item.setDate(date);
+        item.setImg(img);
         item.setContentTitle(contentTitle);
         item.setContentLocation(contentLocation);
 

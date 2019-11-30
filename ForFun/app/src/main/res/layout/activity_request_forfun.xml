@@ -17,7 +17,7 @@
             android:layout_height="240dp">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/rqViewContentImg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:foreground="#80000000"
@@ -40,6 +40,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/rqViewContentBigTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -80,11 +81,13 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
+                android:id="@+id/requestForFunMateProfile"
                 android:layout_width="22dp"
                 android:layout_height="22dp"
                 android:layout_marginEnd="8dp"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/talk"
+                android:scaleType="fitXY"
                 app:layout_constraintEnd_toStartOf="@+id/forfun_request_text"
                 app:layout_constraintTop_toTopOf="@+id/forfun_request_text" />
 
@@ -185,6 +188,7 @@
             android:layout_marginEnd="120dp">
 
             <TextView
+                android:id="@+id/rqViewContentSmallTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="12.5sp"
@@ -202,6 +206,7 @@
                 android:textSize="12.5sp" />
 
             <TextView
+                android:id="@+id/rqViewContentIntroduction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -220,6 +225,7 @@
                 android:textSize="12.5sp" />
 
             <TextView
+                android:id="@+id/rqViewContentTerm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -238,6 +244,7 @@
                 android:textSize="12.5sp" />
 
             <TextView
+                android:id="@+id/rqViewContentTag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -256,6 +263,7 @@
                 android:textSize="12.5sp" />
 
             <TextView
+                android:id="@+id/rqViewContentLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -263,15 +271,6 @@
                 android:text="올림픽공원"
                 android:textColor="#000000"
                 android:textSize="12.5sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:lineSpacingExtra="3.8sp"
-                android:text="서울특별시 송파구 오륜동 올림픽로 424"
-                android:textColor="#777777"
-                android:textSize="11.3sp" />
 
         </LinearLayout>
 

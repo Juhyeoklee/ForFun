@@ -17,7 +17,7 @@
 
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/rqForFunUserProifileBgImg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:foreground="#80000000"
@@ -56,16 +56,16 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/rqForFunUserProfileImg"
                 android:layout_width="69dp"
                 android:layout_height="69dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/account"
-                app:layout_constraintBottom_toTopOf="@+id/imageView3"
-                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintBottom_toTopOf="@+id/rqForFunUserProifileBgImg"
+                app:layout_constraintEnd_toStartOf="@+id/rqForFunUserProifileBgImg"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:layout_constraintStart_toEndOf="@+id/rqForFunUserProifileBgImg"
+                app:layout_constraintTop_toBottomOf="@+id/rqForFunUserProifileBgImg"
                 app:layout_constraintVertical_bias="0.6" />
 
             <ImageView
@@ -77,10 +77,10 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_bell_24dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+                app:layout_constraintTop_toTopOf="@+id/rqForFunUserProifileBgImg" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/rqForFunUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -93,7 +93,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                app:layout_constraintTop_toBottomOf="@+id/rqForFunUserProfileImg" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -102,7 +102,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3">
+                app:layout_constraintTop_toBottomOf="@+id/rqForFunUserName">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
