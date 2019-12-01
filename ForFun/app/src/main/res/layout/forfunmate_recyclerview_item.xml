@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/contentImg"
+            android:layout_width="150dp"
+            android:layout_height="178dp"
+            android:layout_marginStart="28dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toStartOf="@+id/mateProfileBgImg"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:foreground="#80000000"
+            android:src="@drawable/book_content"/>
+
+        <ImageView
+            android:id="@+id/mateProfileBgImg"
+            android:layout_width="150dp"
+            android:layout_height="178dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="28dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/play_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/contentImg"
+            app:layout_constraintTop_toTopOf="parent"
+            android:foreground="#80000000"/>
+
+        <TextView
+            android:id="@+id/forfunName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="1dp"
+            android:lineSpacingExtra="6sp"
+            android:text="그랜드민트페스티벌"
+            android:textColor="#ffffff"
+            android:textSize="12.8sp"
+            app:layout_constraintBottom_toTopOf="@+id/forfunTag"
+            app:layout_constraintStart_toStartOf="@+id/contentImg" />
+
+        <TextView
+            android:id="@+id/forfunTag"
+            android:layout_width="61dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:lineSpacingExtra="4sp"
+            android:text="#공연 #페스티벌"
+            android:textColor="#ffffff"
+            android:textSize="8.3sp"
+            app:layout_constraintBottom_toBottomOf="@+id/contentImg"
+            app:layout_constraintStart_toStartOf="@+id/forfunName" />
+
+        <ImageView
+            android:id="@+id/mateProfile"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="11dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/mateProfileBgImg"
+            app:layout_constraintEnd_toEndOf="@+id/mateProfileBgImg"
+            android:src="@drawable/bg_request_forfun_request" />
+
+        <TextView
+            android:id="@+id/mateName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:lineSpacingExtra="6sp"
+            android:text="이세혁"
+            android:textColor="#ffffff"
+            android:textSize="12.8sp"
+            app:layout_constraintEnd_toStartOf="@+id/mateProfile"
+            app:layout_constraintTop_toTopOf="@+id/forfunName" />
+
+        <TextView
+            android:id="@+id/mateTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:lineSpacingExtra="4sp"
+            android:textColor="#ffffff"
+            android:textSize="8.3sp"
+            app:layout_constraintEnd_toEndOf="@+id/mateName"
+            app:layout_constraintTop_toBottomOf="@+id/mateName"
+            tools:text="#공연 #하이킹 #낚시" />
+
+        <ImageView
+            android:id="@+id/requestBtnImg"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_request_forfun_request"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/mateProfileBgImg"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/contentImg"
+            app:layout_constraintTop_toBottomOf="@+id/contentImg" />
+
+
+        <Button
+            android:id="@+id/forfunMateRcyViewRequestBtn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/clear"
+            android:letterSpacing="-0.04"
+            android:shadowColor="#29000000"
+            android:shadowDy="3"
+            android:shadowRadius="30"
+            android:text="포펀요청하기"
+            android:textColor="#ffffff"
+            android:textSize="12.5sp"
+            app:layout_constraintBottom_toBottomOf="@+id/requestBtnImg"
+            app:layout_constraintEnd_toEndOf="@+id/requestBtnImg"
+            app:layout_constraintStart_toStartOf="@+id/requestBtnImg"
+            app:layout_constraintTop_toTopOf="@+id/requestBtnImg"
+            app:layout_constraintVertical_bias="0.16000003" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:lineSpacingExtra="3.8sp"
+            android:text="메이트"
+            android:textColor="#ffffff"
+            android:textSize="7.5sp"
+            app:layout_constraintStart_toStartOf="@+id/mateProfileBgImg"
+            app:layout_constraintTop_toTopOf="@+id/mateProfileBgImg" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:lineSpacingExtra="3.8sp"
+            android:text="포펀"
+            android:textColor="#ffffff"
+            android:textSize="7.5sp"
+            app:layout_constraintEnd_toEndOf="@+id/contentImg"
+            app:layout_constraintTop_toTopOf="@+id/contentImg" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
