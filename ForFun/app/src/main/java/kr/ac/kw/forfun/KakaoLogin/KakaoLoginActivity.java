@@ -6,7 +6,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -15,11 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -35,13 +30,12 @@ import com.kakao.util.exception.KakaoException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import kr.ac.kw.forfun.ContentSelectActivity;
-import kr.ac.kw.forfun.MainActivity;
+import kr.ac.kw.forfun.Activity.ContentSelectActivity;
+import kr.ac.kw.forfun.Activity.MainActivity;
 import kr.ac.kw.forfun.R;
+import kr.ac.kw.forfun.Class.User;
 
 public class KakaoLoginActivity extends AppCompatActivity {
     private static final String TAG = "WSY";
@@ -166,6 +160,7 @@ public class KakaoLoginActivity extends AppCompatActivity {
             public void onSuccess(MeV2Response result) {
                 Log.e(TAG, "requestMe onSuccess message : " + result.getKakaoAccount().getEmail() + " " + result.getId() + " " + result.getProperties());
                 userEmail = result.getKakaoAccount().getEmail();
+                User.userEmail = userEmail;
                 firestore.collection("users")
                         .get()
                         .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -198,12 +193,7 @@ public class KakaoLoginActivity extends AppCompatActivity {
                                 }
                             }
                         });
-
-
-
-
             }
-
         });
     }
 

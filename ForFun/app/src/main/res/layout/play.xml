@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/movies"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="29dp"
+    android:paddingTop="25dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/notosans_medium"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:text="#공연"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fcfafa"
+        android:scrollbars="horizontal">
+        <LinearLayout
+            android:id="@+id/play1"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="142.9dp"
+                android:layout_height="98.8dp"
+                android:src = "@drawable/c_play1"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="[연극] 극적인 하룻밤"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="대학로 드림아트센터"/>
+        </LinearLayout>
+        <View
+            android:layout_width="20dp"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:id="@+id/play2"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="142.9dp"
+                android:layout_height="98.8dp"
+                android:src = "@drawable/c_play2"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="[연극] 옥탑방 고양이"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="대학로 틴틴홀"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

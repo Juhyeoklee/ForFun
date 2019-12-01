@@ -11,12 +11,22 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
-import kr.ac.kw.forfun.ContentsPagerAdapter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import kr.ac.kw.forfun.Adapter.ContentsPagerAdapter;
+import kr.ac.kw.forfun.Class.Content;
 import kr.ac.kw.forfun.R;
+import kr.ac.kw.forfun.Class.User;
 import kr.ac.kw.forfun.ViewPage.Viewpage1;
 import kr.ac.kw.forfun.ViewPage.Viewpage2;
 
@@ -25,11 +35,13 @@ import kr.ac.kw.forfun.ViewPage.Viewpage2;
  * A simple {@link Fragment} subclass.
  */
 public class Menu3Fragment extends Fragment {
+    String TAG = "WSY";
+
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
     private Context mContext;
     private ContentsPagerAdapter mContentPagerAdapter;
-    View view;
+    private View view;
 
     Viewpage1 viewpage1 = new Viewpage1();
     Viewpage2 viewpage2 = new Viewpage2();
@@ -39,16 +51,41 @@ public class Menu3Fragment extends Fragment {
         // Required empty public constructor
     }
 
+   // private ArrayList<ArrayList<Content>> allContentList = new ArrayList<>();
+
+
+    Context context;
+
+    //생성된 FirebaseStorage를 참조하는 storage 생성
+    FirebaseStorage storage;
+    StorageReference storageRef;
+    StorageReference pathReference;
+    FirebaseFirestore firestore;
+
+
+    Map<String, Map> data = new HashMap<>();
+
+    Map<String, String> imageName = new HashMap<>();
+
+    ArrayList<String> name = new ArrayList<>();
+
+
+    TextView inputName;
+    String key;
+
+    ArrayList<Content> movieList1 = new ArrayList();
+    int i = 0;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_menu1, container,false);
+        view = inflater.inflate(R.layout.fragment_menu3, container,false);
         mContext = view.getContext();
 
-//        mTabLayout.addTab(mTabLayout.newTab().setText("AAAAA"));
-//        mTabLayout.addTab(mTabLayout.newTab().setText("BBBBB"));
+        // 다시 이 프래그먼트로 돌아올때 취미 이름 갯수를 초기화해서 보여주기 위해
+
+
         init();
 
-        //mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
 
         mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -61,7 +98,7 @@ public class Menu3Fragment extends Fragment {
                 switch (pos) {
                     case 0:
                         selected = viewpage1;
-
+                        Log.d(TAG, "onTabSelected: ");
                         break;
                     case 1:
                         selected = viewpage2;
@@ -81,13 +118,13 @@ public class Menu3Fragment extends Fragment {
             }
         });
 
-        //return inflater.inflate(R.layout.fragment_menu1, container, false);
+        //return inflater.inflate(R.layout.fragment_menu3, container, false);
         return view;
     }
 
-    public void init(){
-        mTabLayout = (TabLayout)view.findViewById(R.id.tablayout);
-        mViewPager = (ViewPager)view.findViewById(R.id.viewpager);
+    private void init(){
+        mTabLayout = view.findViewById(R.id.tablayout);
+        mViewPager = view.findViewById(R.id.viewpager);
         mTabLayout.setupWithViewPager(mViewPager);
 
         mContentPagerAdapter = new ContentsPagerAdapter(getChildFragmentManager());
@@ -96,8 +133,8 @@ public class Menu3Fragment extends Fragment {
     }
 
     private void init_pager(){
-        mContentPagerAdapter.addItem(viewpage1, "TEST1");
-        mContentPagerAdapter.addItem(viewpage2,"TEST2");
+        mContentPagerAdapter.addItem(viewpage1, "콘텐츠 모아보기");
+        mContentPagerAdapter.addItem(viewpage2,"친구 모아보기");
         Log.i("zzz", mContentPagerAdapter.getCount()+" ");
 
 
@@ -107,7 +144,7 @@ public class Menu3Fragment extends Fragment {
     public void onStop() {
         super.onStop();
         mContentPagerAdapter.clearItem();
-        mContentPagerAdapter.notifyDataSetChanged();;
+        mContentPagerAdapter.notifyDataSetChanged();
         mViewPager.setAdapter(mContentPagerAdapter);
         Log.i("zzz", mContentPagerAdapter.getCount()+" ");
     }
@@ -115,6 +152,7 @@ public class Menu3Fragment extends Fragment {
     @Override
     public void onDestroy(){
         super.onDestroy();
+        User.contentCount = 0;
         Log.i("test","test");
     }
 

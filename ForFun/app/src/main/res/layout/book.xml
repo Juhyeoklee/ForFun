@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/movies"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="29dp"
+    android:paddingTop="25dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/notosans_medium"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:text="#책"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fcfafa">
+        <LinearLayout
+            android:id="@+id/book1"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="142.9dp"
+                android:layout_height="98.8dp"
+                android:src = "@drawable/c_book1"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[서점] 북파크"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="서울 이태원"/>
+        </LinearLayout>
+        <View
+            android:layout_width="20dp"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:id="@+id/book2"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="142.9dp"
+                android:layout_height="98.8dp"
+                android:src = "@drawable/c_book2"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="[책] 부쿠"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="서울 종로 인사동"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

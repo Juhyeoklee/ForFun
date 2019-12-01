@@ -5,17 +5,29 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".KakaoLogin.GlobalApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ContentSelectActivity"></activity>
+        <activity android:name=".sub_Content.Show2Activity"></activity>
+        <activity android:name=".sub_Content.Show1Activity" />
+        <activity android:name=".sub_Content.Book2Activity" />
+        <activity android:name=".sub_Content.Book1Activity" />
+        <activity android:name=".sub_Content.Play2Activity" />
+        <activity android:name=".sub_Content.Play1Activity" />
+        <activity android:name=".sub_Content.Movie2Activity" />
+        <activity android:name=".sub_Content.Movie1Activity" />
+        <activity android:name=".Contents.exhibitionActivity" />
+        <activity android:name=".LoadingActivity" />
+        <activity android:name=".Activity.ContentSelectActivity" />
         <activity android:name=".KakaoLogin.KakaoLoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,8 +35,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".Activity.MainActivity" />
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
