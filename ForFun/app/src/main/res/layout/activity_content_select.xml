@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#fcfafa"
-    tools:context=".ContentSelectActivity">
+    tools:context=".Activity.ContentSelectActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
