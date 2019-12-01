@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import android.view.View;
 
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -66,6 +67,14 @@ public class RequestForFunActivity extends AppCompatActivity {
 
         userProfileImg.setBackground(new ShapeDrawable(new OvalShape()));
         userProfileImg.setClipToOutline(true);
+
+        Button backBtn = findViewById(R.id.rqForFunBackBtn);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         mTabLayout = findViewById(R.id.tabs);
         mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

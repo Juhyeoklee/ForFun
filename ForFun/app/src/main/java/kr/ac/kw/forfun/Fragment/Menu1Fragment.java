@@ -47,11 +47,7 @@ public class Menu1Fragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        matelist.clear();
-        mContentsList.clear();
-        mUserList.clear();
 
-        setData();
 
 
     }
@@ -59,6 +55,12 @@ public class Menu1Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        matelist.clear();
+        mContentsList.clear();
+        mUserList.clear();
+        Log.d("onCreateView", "Fragment1 onCreateView");
+        setData();
 
 
         View v = inflater.inflate(R.layout.fragment_menu3, container, false);
@@ -128,11 +130,6 @@ public class Menu1Fragment extends Fragment {
 
         mUserList.add(new User(R.drawable.profilebg4, R.drawable.profile4, "허채원", "#공연#방탈출","전체", user4ContentsList));
 
-        mUserList.add(new User(R.drawable.profilebg4, R.drawable.profile4, "허채원", "#공연#방탈출","전체", user4ContentsList));
-
-        mUserList.add(new User(R.drawable.profilebg4, R.drawable.profile4, "허채원", "#공연#방탈출","전체", user4ContentsList));
-
-        mUserList.add(new User(R.drawable.profilebg4, R.drawable.profile4, "허채원", "#공연#방탈출","전체", user4ContentsList));
 
         matelist.add(new ForFunMateItem(mContentsList.get(0), mUserList.get(0)));
         matelist.add(new ForFunMateItem(mContentsList.get(1), mUserList.get(1)));

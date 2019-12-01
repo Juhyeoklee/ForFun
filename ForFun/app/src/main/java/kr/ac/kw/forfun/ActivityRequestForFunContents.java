@@ -2,6 +2,8 @@ package kr.ac.kw.forfun;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,5 +36,13 @@ public class ActivityRequestForFunContents extends AppCompatActivity {
         introduction.setText(mContents.getContentIntroduction());
         tag.setText(mContents.getContentTag());
         location.setText(mContents.getContentLocation());
+
+        Button backBtn = findViewById(R.id.rqForFunContentsBackBtn);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }

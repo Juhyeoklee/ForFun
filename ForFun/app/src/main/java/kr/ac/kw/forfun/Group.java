@@ -4,12 +4,14 @@ public class Group {
     private Contents contents;
     private String tag;
     private String title;
+    private User hostUser;
     private String hostName;
 
-    public Group(Contents contents, String tag, String title, String hostName) {
+    public Group(Contents contents, String tag, String title, User user, String hostName) {
         this.contents = contents;
         this.tag = tag;
         this.title = title;
+        this.hostUser = user;
         this.hostName = hostName;
     }
 
@@ -43,5 +45,13 @@ public class Group {
 
     public void setHostName(String hostName) {
         this.hostName = hostName;
+    }
+
+    public User getHostUser() {
+        return hostUser;
+    }
+
+    public void setHostUser(User hostUser) {
+        this.hostUser = hostUser;
     }
 }

@@ -56,7 +56,7 @@
         <TextView
             android:id="@+id/forfunTag"
             android:layout_width="61dp"
-            android:layout_height="9dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="11dp"
             android:lineSpacingExtra="4sp"
             android:text="#공연 #페스티벌"

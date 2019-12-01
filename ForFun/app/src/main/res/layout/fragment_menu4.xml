@@ -61,11 +61,11 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/rqForFunUserProfileImg"
+                    android:id="@+id/myPageProfileImg"
                     android:layout_width="69dp"
                     android:layout_height="69dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/bg_request_forfun_request"
+                    android:src="@drawable/profile1"
                     app:layout_constraintBottom_toTopOf="@+id/rqForFunUserProifileBgImg"
                     app:layout_constraintEnd_toStartOf="@+id/rqForFunUserProifileBgImg"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -98,7 +98,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/rqForFunUserProfileImg" />
+                    app:layout_constraintTop_toBottomOf="@+id/myPageProfileImg" />
 
                 <LinearLayout
                     android:id="@+id/linearLayout"
@@ -281,114 +281,24 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/bottom_border">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="30dp"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="19dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_chat" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:gravity="center_horizontal"
-                        android:letterSpacing="0.02"
-                        android:lineSpacingExtra="2.5sp"
-                        android:text="찜하기"
-                        android:textColor="#000000"
-                        android:textSize="10sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="22dp"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_more" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:gravity="center_horizontal"
-                        android:letterSpacing="0.02"
-                        android:lineSpacingExtra="2.5sp"
-                        android:text="더보기"
-                        android:textColor="#000000"
-                        android:textSize="10sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="23dp"
-                    android:gravity="center_vertical|end"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="25dp"
-                            android:layout_height="19dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_add_other_friend" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="3dp"
-                            android:gravity="center_horizontal"
-                            android:letterSpacing="0.02"
-                            android:lineSpacingExtra="2.5sp"
-                            android:text="비슷한 컨텐츠 더보기"
-                            android:textColor="#000000"
-                            android:textSize="10sp" />
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-
             <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabs"
+                android:id="@+id/myPageTab"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="활동내역 보기 " />
+                    android:text="찜 목록" />
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="펀 성공률 " />
+                    android:text="포펀리스트" />
             </com.google.android.material.tabs.TabLayout>
+
+
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -396,16 +306,32 @@
                     android:id="@+id/myHeartForFunRcyView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     />
+
+                <TextView
+                    android:id="@+id/notOpened"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:textAlignment="center"
+                    android:lineSpacingExtra="2.5sp"
+                    android:text="공개되지 않았습니다."
+                    android:textColor="#000000"
+                    android:textSize="12.5sp"
+                    android:visibility="gone"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/myForFunListRcyView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:visibility="gone"/>
-
             </RelativeLayout>
+
+
 
         </LinearLayout>
     </ScrollView>

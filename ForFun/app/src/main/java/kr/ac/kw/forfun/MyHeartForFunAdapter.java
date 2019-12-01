@@ -67,6 +67,7 @@ public class MyHeartForFunAdapter extends RecyclerView.Adapter<MyHeartForFunAdap
         holder.forfunName.setText(mData.get(position).getTitle());
         holder.forfunPostUser.setText(mData.get(position).getHostName());
         holder.groupImg.setImageResource(mData.get(position).getContents().getContentImg());
+        holder.profile.setImageResource(mData.get(position).getHostUser().getUserProfileImg());
     }
 
     @Override

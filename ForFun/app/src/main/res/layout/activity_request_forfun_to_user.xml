@@ -29,7 +29,7 @@
                 app:layout_constraintVertical_bias="1.0" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/rqForFunUserBackBtn"
                 android:layout_width="12dp"
                 android:layout_height="0dp"
                 android:layout_marginLeft="324dp"
@@ -42,7 +42,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/rqForFunUserProfileImg"
+                android:id="@+id/myPageProfileImg"
                 android:layout_width="69dp"
                 android:layout_height="69dp"
                 android:scaleType="centerCrop"
@@ -78,7 +78,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rqForFunUserProfileImg" />
+                app:layout_constraintTop_toBottomOf="@+id/myPageProfileImg" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -295,5 +295,30 @@
                 android:text="펀 성공률 " />
 
         </com.google.android.material.tabs.TabLayout>
+        <GridView
+            android:id="@+id/rqForFunUserActivityList"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:horizontalSpacing="25dp"
+            android:verticalSpacing="17dp"
+            android:numColumns="2"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="20dp"/>
+        <TextView
+            android:id="@+id/notOpened"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:lineSpacingExtra="2.5sp"
+            android:text="공개되지 않았습니다."
+            android:textColor="#000000"
+            android:textSize="12.5sp"
+            android:visibility="gone"/>
     </LinearLayout>
 </ScrollView>

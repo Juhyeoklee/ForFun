@@ -19,6 +19,7 @@ import kr.ac.kw.forfun.Group;
 import kr.ac.kw.forfun.MyHeartForFunAdapter;
 import kr.ac.kw.forfun.MyHeartForFunListItem;
 import kr.ac.kw.forfun.R;
+import kr.ac.kw.forfun.User;
 
 
 /**
@@ -69,9 +70,9 @@ public class Menu2Fragment extends Fragment {
                 "10.01(sat) ~ ",
                 "#공연#전시",
                 "서울 종로구 북촌로 71");
-        groupList.add(new Group(contents1, contents1.getContentTag(), "그랜드 민트 페스티벌 고고", "허채원"));
-        groupList.add(new Group(contents2, contents2.getContentTag(), "연극 보러가실부우운", "이주혁"));
-        groupList.add(new Group(contents3, contents3.getContentTag(), "일요일에 나랑 같이 마카롱 만들 분", "김탁구"));
+        groupList.add(new Group(contents1, contents1.getContentTag(), "그랜드 민트 페스티벌 고고",new User(R.drawable.profilebg4, R.drawable.profile4, "허채원", "#공연#하이킹#낚시","서울전체", null),  "허채원"));
+        groupList.add(new Group(contents2, contents2.getContentTag(), "연극 보러가실부우운",new User(R.drawable.profilebg1, R.drawable.profile1, "이주혁", "#공연#하이킹#낚시","서울전체", null), "이주혁"));
+        groupList.add(new Group(contents3, contents3.getContentTag(), "일요일에 나랑 같이 마카롱 만들 분", new User(R.drawable.profilebg3, R.drawable.profile3, "민경원", "#공연","전체", null),"김탁구"));
 
 
 

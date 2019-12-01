@@ -29,6 +29,8 @@
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
         <activity android:name=".ActivityRequestForFunContents"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity android:name=".ActivityRequestForFunUser"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"

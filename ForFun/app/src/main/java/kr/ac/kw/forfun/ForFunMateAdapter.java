@@ -2,6 +2,9 @@ package kr.ac.kw.forfun;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
@@ -61,7 +64,7 @@ public class ForFunMateAdapter extends RecyclerView.Adapter<ForFunMateAdapter.Vi
 
             profile.setBackground(new ShapeDrawable(new OvalShape()));
             context = itemView.getContext();
-
+/*
             GradientDrawable round = (GradientDrawable) itemView.getContext().getDrawable(R.drawable.round_button);
             GradientDrawable leftCornerRadius = (GradientDrawable) itemView.getContext().getDrawable(R.drawable.left_corner_radius);
             GradientDrawable rightCornerRadius = (GradientDrawable) itemView.getContext().getDrawable(R.drawable.right_corner_radius);
@@ -78,7 +81,7 @@ public class ForFunMateAdapter extends RecyclerView.Adapter<ForFunMateAdapter.Vi
             if(Build.VERSION.SDK_INT >= 21) {
                 profile.setClipToOutline(true);
             }
-
+*/
             contentImg.setOnClickListener(this);
             mateProfileBg.setOnClickListener(this);
             requestBtn.setOnClickListener(this);
@@ -96,7 +99,7 @@ public class ForFunMateAdapter extends RecyclerView.Adapter<ForFunMateAdapter.Vi
                 context.startActivity(intent);
 
             }else if(view.getId() == mateProfileBg.getId()){
-                intent = new Intent(context, ActivityRequestForFunContents.class);
+                intent = new Intent(context, ActivityRequestForFunUser.class);
                 intent.putExtra("user", user);
                 context.startActivity(intent);
 
@@ -132,24 +135,38 @@ public class ForFunMateAdapter extends RecyclerView.Adapter<ForFunMateAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ForFunMateAdapter.ViewHolder viewHolder = (ForFunMateAdapter.ViewHolder)holder;
-        viewHolder.contents = mData.get(position).getContents();
-        viewHolder.user = mData.get(position).getUser();
+
+        GradientDrawable roundBtn = (GradientDrawable) holder.itemView.getContext().getDrawable(R.drawable.round_button);
+        GradientDrawable roundImg = (GradientDrawable) holder.itemView.getContext().getDrawable(R.drawable.image_round);
+
+        holder.requestBtnBg.setBackground(roundBtn);
+        holder.requestBtnBg.setClipToOutline(true);
+
+        holder.contentImg.setBackground(roundImg);
+        holder.contentImg.setClipToOutline(true);
+
+        holder.mateProfileBg.setBackground(roundImg);
+        holder.mateProfileBg.setClipToOutline(true);
+
+        if(Build.VERSION.SDK_INT >= 21) {
+            holder.profile.setClipToOutline(true);
+        }
+
+        holder.contents = mData.get(position).getContents();
+        holder.user = mData.get(position).getUser();
 
         holder.mateProfileBg.setImageResource(mData.get(position).getUser().getUserProfileBgImg());
-        holder.profile.setImageResource(mData.get(position).getUser().getUserProfileImg());
         holder.contentImg.setImageResource(mData.get(position).getContents().getContentImg());
+        holder.profile.setImageResource(mData.get(position).getUser().getUserProfileImg());
+
 
         holder.forfunName.setText(mData.get(position).getContents().getContentName());
         holder.forfunTag.setText(mData.get(position).getContents().getContentTag());
 
         holder.mateName.setText(mData.get(position).getUser().getUserName());
         holder.mateTag.setText(mData.get(position).getUser().getUserTag());
-
-
-
+        Log.d("ForFunMateAdapter", "onCreateView : " + position);
     }
-
     @Override
     public int getItemCount() {
         return mData.size();
